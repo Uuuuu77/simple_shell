@@ -1,14 +1,14 @@
 #include "shell.h"
 
 /**
- * execute - Entry point-> It executes any valid command.
- * @cmd: input command path found
+ * execute - function executes any valid command.
+ * @cmd: input command path that is found
  * @av: input array of commands and flags
 */
 void execute(char *cmd, char **av)
 {
 	pid_t child_pid;
-	int stat;
+	int status;
 
 	if (cmd)
 	{
@@ -24,7 +24,7 @@ void execute(char *cmd, char **av)
 		{
 			do {
 				waitpid(child_pid, &stat, WUNTRACED);
-			} while (!WIFEXITED(stat) && !WIFSIGNALED(stat));
+			} while (!WIFEXITED(stat) && !WIFSIGNALED(status));
 		}
 	}
 }
