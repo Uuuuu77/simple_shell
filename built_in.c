@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * built_in - Entry point-> It executes exit command.
- * @cmd: input list of commands
- * @str: input user string
+ * built_in - function executes exit command.
+ * @cmd: input of list of commands
+ * @str: input of user string
 */
 void built_in(char **cmd, char *str)
 {
@@ -16,16 +16,16 @@ void built_in(char **cmd, char *str)
 }
 
 /**
- * print_env - Entry point-> It prints the environment.
+ * print_env - func prints the environment.
  * @cmd: input commands
 */
 void print_env(char **cmd)
 {
-	int b;
+	int j;
 
-	for (b = 0; environ[b] != NULL; b++)
+	for (j = 0; environ[j] != NULL; j++)
 	{
-		_puts(environ[b]);
+		_puts(environ[j]);
 		_putchar('\n');
 	}
 	free_malloc(cmd);
