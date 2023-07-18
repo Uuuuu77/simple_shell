@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * _putchar_err - Entry point-> writes character c to STDERR.
- * @c: input character to print
+ * _putchar_err - function writes character c to STDERR.
+ * @c: character to print
  * Return: 1 (Success), otherwise -1 (Error)
 */
 int _putchar_err(char c)
@@ -11,7 +11,7 @@ int _putchar_err(char c)
 }
 
 /**
- * print_counter - Entry point-> Converts int to astring & prints to STDERR.
+ * print_counter - function Converts int to astring & prints to STDERR.
  * @num: input int to convert & print
 */
 void print_counter(int num)
