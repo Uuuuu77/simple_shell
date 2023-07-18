@@ -3,7 +3,7 @@
 /**
  * tokenize - Entry point-> It splits string by delimeter given
  * @str: input string to split
- * Return: array of strings (Success)
+ * Return: array of strings if Successful
 */
 char **tokenize(char *str)
 {
