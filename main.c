@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * sigint_handler - Entry point-> It handles the SIGINT.
+ * sigint_handler - func handles the SIGINT.
  * @sigint_code: input value of sigint
 */
 void sigint_handler(int sigint_code)
@@ -12,14 +12,14 @@ void sigint_handler(int sigint_code)
 }
 
 /**
- * main - Entry point-> Display the prompt.
- * @ac: input number of arguments
- * @av: input pointer to list of arguments
+ * main - function Display the prompt.
+ * @ac: argument count
+ * @av: pointer to list of arguments
  * Return: 0 (success)
 */
 int main(int ac __attribute__((unused)), char **av)
 {
-	char *b, *cmd, *user_input = NULL, **cmd_list, **path;
+	char *b, *cmnd, *user_input = NULL, **cmd_list, **path;
 	ssize_t c_read;
 	size_t n;
 	int counter = 0;
@@ -49,7 +49,7 @@ int main(int ac __attribute__((unused)), char **av)
 		path = path_list(b, cmd_list[0]);
 		cmd = test_path(path, cmd_list);
 		if (cmd != NULL)
-			execute(cmd, cmd_list);
+			execute(cmnd, cmd_list);
 		else
 		{
 			cmd_not_found(av, counter, cmd_list, path);
