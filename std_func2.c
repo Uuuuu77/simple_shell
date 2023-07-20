@@ -7,7 +7,7 @@
 */
 char *_getenv(const char *name)
 {
-	ssize_t name_len = _strlen(name);
+	size_t name_len = _strlen(name);
 	char *en = NULL;
 	int b = 0;
 
@@ -89,5 +89,5 @@ int _strcmp(char *s1, char *s2)
 	if (s1[b] == s2[b])
 		return (0);
 
-	return (s1[b] = s2[b]);
+	return (s1[b] - s2[b]);
 }

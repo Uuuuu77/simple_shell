@@ -15,9 +15,9 @@ void prompt(void)
  * @av: input arguments list
  * @counter: input commands counter
  * @cmd_list: input list of commands
- * @path: input path list
+ * @paths: input path list
 */
-void cmd_not_found(char **av, int counter, char **cmd_list, char **path)
+void cmd_not_found(char **av, int counter, char **cmd_list, char **paths)
 {
 	_puts_err(av[0]);
 	_puts_err(": ");
@@ -27,7 +27,7 @@ void cmd_not_found(char **av, int counter, char **cmd_list, char **path)
 	_puts_err(": not found");
 	_putchar_err('\n');
 	free_malloc(cmd_list);
-	free_malloc(path);
+	free_malloc(paths);
 }
 
 /**
