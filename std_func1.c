@@ -30,7 +30,7 @@ char *_strcat(char *dest, char *src)
 */
 char *_strcpy(char *dest, char *src)
 {
-	int b;
+	int b = 0;
 
 	for (; src[b] != 0; b++)
 		dest[b] = src[b];
