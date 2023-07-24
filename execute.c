@@ -1,5 +1,5 @@
 #include "shell.h"
-
+#include <stdlib.h>
 /**
  * execute - function executes any valid command.
  * @cmd: input command path that is found
@@ -8,7 +8,7 @@
 void execute(char *cmd, char **av)
 {
 	pid_t child_pid;
-	int status;
+	int stat;
 
 	if (cmd)
 	{
@@ -24,7 +24,7 @@ void execute(char *cmd, char **av)
 		{
 			do {
 				waitpid(child_pid, &stat, WUNTRACED);
-			} while (!WIFEXITED(stat) && !WIFSIGNALED(status));
+			} while (!WIFEXITED(stat) && !WIFSIGNALED(stat));
 		}
 	}
 }

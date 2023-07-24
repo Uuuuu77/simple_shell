@@ -8,7 +8,7 @@ void sigint_handler(int sigint_code)
 {
 	(void)sigint_code;
 	_putchar('\n');
-	_puts("($) ");
+	_puts("$ ");
 }
 
 /**
@@ -47,8 +47,8 @@ int main(int ac __attribute__((unused)), char **av)
 		}
 		b = _getenv("PATH");
 		path = path_list(b, cmd_list[0]);
-		cmd = test_path(path, cmd_list);
-		if (cmd != NULL)
+		cmnd = test_path(path, cmd_list);
+		if (cmnd != NULL)
 			execute(cmnd, cmd_list);
 		else
 		{
