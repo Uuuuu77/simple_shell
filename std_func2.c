@@ -23,7 +23,7 @@ char *_getenv(const char *name)
 /**
  * _putchar - Entry point-> Writes the character c to stdout.
  * @c: input character to print
- * Return 1 (Success), Otherwise -1 (Error)
+ * Return: 1 (Success), Otherwise -1 (Error)
 */
 int _putchar(char c)
 {
